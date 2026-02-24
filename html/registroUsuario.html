@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="/css/registro.css" />
+  <script src="/js/registro.js" defer></script>
+</head>
+
+<body>
+  <header class="top">
+    <a class="back" href="#" aria-label="Volver">←</a>
+    <a class="brand" href="#" aria-label="Inicio">
+      <span aria-hidden="true">🍴</span><strong>JUST EAT</strong>
+    </a>
+  </header>
+
+  <main class="wrap">
+    <section class="card" aria-label="Iniciar sesión">
+      <h1>Completar cuenta</h1>
+
+      <form action="#" method="post">
+
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Nombre" autocomplete="given-name" required>
+
+        <label for="apellidos">Apellidos</label>
+        <input id="apellidos" name="apellidos" type="text" placeholder="Apellidos" autocomplete="family-name" required>
+
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="Correo electrónico" required>
+
+        <label for="pass">Contraseña</label>
+        <input id="pass" name="password" type="password" autocomplete="new-password" placeholder="Contraseña" required minlength="8"
+               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{8,}$"
+               title="Mínimo 8 caracteres, con mayúscula, minúscula, número y símbolo">
+
+        <label for="pass2">Confirmar contraseña</label>
+        <input id="pass2" name="password2" type="password" placeholder="Repite la contraseña" autocomplete="new-password" required>
+        
+        <button class="boton" type="submit">Completar</button>
+
+      </form>
+    </section>
+  </main>
+</body>
+</html>

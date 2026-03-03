@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro de usuario</title>
+
+  <!-- CSS propio de registro -->
+  <link rel="stylesheet" href="../css/registro.css">
+</head>
+
+<body>
+
+  <header class="top">
+    <a class="back" href="buscar.html" aria-label="Volver">←</a>
+    <a class="brand" href="buscar.html" aria-label="Inicio">
+      <span aria-hidden="true">🍴</span><strong>JUST EAT</strong>
+    </a>
+  </header>
+
+  <main class="wrap">
+    <section class="card" aria-label="Registro de usuario">
+
+      <h1>Completar cuenta</h1>
+
+      <!-- Mensajes generales del formulario (los pinta el JS) -->
+      <div id="formMessages" class="messages" aria-live="polite"></div>
+
+      <form id="registerForm" action="#" method="post" novalidate>
+
+        <!-- Nombre -->
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input id="nombre"
+                 name="nombre"
+                 type="text"
+                 placeholder="Nombre"
+                 autocomplete="given-name"
+                 required
+                 maxlength="60">
+        </div>
+
+        <!-- Apellidos -->
+        <div class="field">
+          <label for="apellidos">Apellidos</label>
+          <input id="apellidos"
+                 name="apellidos"
+                 type="text"
+                 placeholder="Apellidos"
+                 autocomplete="family-name"
+                 required
+                 maxlength="80">
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+          <label for="email">Correo electrónico</label>
+          <input id="email"
+                 name="email"
+                 type="email"
+                 placeholder="nombre@dominio.com"
+                 autocomplete="email"
+                 inputmode="email"
+                 required
+                 maxlength="120">
+        </div>
+
+        <!-- Contraseña -->
+        <div class="field">
+          <label for="pass">Contraseña</label>
+          <input id="pass"
+                 name="password"
+                 type="password"
+                 placeholder="Mínimo 8 caracteres"
+                 autocomplete="new-password"
+                 required
+                 minlength="8"
+                 maxlength="64">
+          <p class="hint">
+            Mín. 8 caracteres con mayúscula, minúscula, número y símbolo.
+          </p>
+        </div>
+
+        <!-- Confirmar contraseña -->
+        <div class="field">
+          <label for="pass2">Confirmar contraseña</label>
+          <input id="pass2"
+                 name="password2"
+                 type="password"
+                 placeholder="Repite la contraseña"
+                 autocomplete="new-password"
+                 required
+                 minlength="8"
+                 maxlength="64">
+        </div>
+
+        <!-- Botón -->
+        <button class="btn btn--primary" type="submit">
+          Completar registro
+        </button>
+
+      </form>
+
+    </section>
+  </main>
+
+  <!-- JS propio de registro -->
+  <script src="../js/registro.js" defer></script>
+
+</body>
+</html>
